@@ -1,6 +1,6 @@
 package gol1bjon.developer.springbootapp.service;
 
-import gol1bjon.developer.springbootapp.StudentRepository;
+import gol1bjon.developer.springbootapp.repository.StudentRepository;
 import gol1bjon.developer.springbootapp.entity.Students;
 import gol1bjon.developer.springbootapp.exception.NotFoundException;
 import gol1bjon.developer.springbootapp.payload.ResponseApi;

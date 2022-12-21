@@ -1,9 +1,6 @@
 package gol1bjon.developer.springbootapp.entity.file;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.io.Serializable;
@@ -14,22 +11,31 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class File implements Serializable {
+public class FileClass implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
+    @Column(nullable = false)
+    private String originalName;
 
+    @Column(nullable = false)
+    private String generatedName;
+
+    @Column(nullable = false)
     private String extension;
 
+    @Column(nullable = false)
     private Long fileSize;
 
-    private String hashId;
-
+    @Column(nullable = false)
     private String contentType;
 
     private String uploadPath;
 
+    @Enumerated(EnumType.STRING)
     private FileStatus fileStatus;
+
+    private String url;
 }

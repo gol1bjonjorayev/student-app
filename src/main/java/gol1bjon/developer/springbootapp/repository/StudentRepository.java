@@ -1,4 +1,4 @@
-package gol1bjon.developer.springbootapp;
+package gol1bjon.developer.springbootapp.repository;
 
 import gol1bjon.developer.springbootapp.entity.Students;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -18,5 +18,6 @@ public interface StudentRepository extends JpaRepository<Students,Long> {
 
     @Query(value = "select * from Students s where upper(s.first_name) like upper(concat(:firstName,'%'))",nativeQuery = true)
     List<Students> searchByName(@Param("firstName") String firstName);
+
 
 }

@@ -1,9 +1,10 @@
 package gol1bjon.developer.springbootapp.controller;
 
-import gol1bjon.developer.springboottest.entity.Students;
-import gol1bjon.developer.springboottest.payload.ResponseApi;
-import gol1bjon.developer.springboottest.payload.StudentDTO;
-import gol1bjon.developer.springboottest.service.StudentService;
+
+import gol1bjon.developer.springbootapp.entity.Students;
+import gol1bjon.developer.springbootapp.payload.ResponseApi;
+import gol1bjon.developer.springbootapp.payload.StudentDTO;
+import gol1bjon.developer.springbootapp.service.StudentService;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
